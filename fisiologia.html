@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compravendita Appunti - Fisiologia</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="fisiologia.css" rel="stylesheet" />
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+    <div class="container mt-5">
+      <h2>Moduli di Fisiologia</h2>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title"> Fisiologia 1</h3>
+              <p class="card-text">Breve descrizione del modulo.</p>
+              <p class="card-text">Prezzo totale: 20€</p>
+              <button class="btn btn-success" data-toggle="modal" data-target="#previewModal1">Anteprima</button>
+
+              <h4 class="mt-3">Modulo 1: Fisiologia Cellulare</h4>
+              <p>Indice del modulo:</p>
+              <ul>
+                <li>Canali ionici</li>
+                <li>Potenziale di Membrana a Riposo</li>
+                <li>Potenziali Graduati</li>
+                <li>Potenziale D'Azione</li>
+                <li>Fisiologia della Cellula Muscolare</li>
+                <li>Sinapsi Elettrica e Chimica</li>
+              </ul>
+
+              <p>Prezzo: 6€ (2€ aggiuntivi per il download)</p>
+              <button class="btn btn-primary" onclick="startPayment()">Acquista</button>
+
+              <div id="pdfViewer" style="display:none;" class="mt-3">
+                <iframe src="path/to/sample.pdf" width="100%" height="500px" title="Anteprima Fisiologia Cellulare"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal per l'anteprima -->
+    <div class="modal fade" id="previewModal1" tabindex="-1" aria-labelledby="previewModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Anteprima Modulo 1: Fisiologia 1</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Visualizza l'anteprima qui. Saranno mostrate le prime 2 pagine del PDF.</p>
+            <iframe src="path/to/sample.pdf" width="100%" height="500px" title="Anteprima Fisiologia 1"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function startPayment() {
+        // Integrazione del pagamento
+        document.getElementById('pdfViewer').style.display = 'block';
+      }
+    </script>
+  </body>
+</html>
+

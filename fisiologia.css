@@ -1,0 +1,10 @@
+html {
+overflow: auto;    
+}
+
+body {
+    background: #eeeefe;
+    display: inline-block;
+    align-items: center;
+    font-family: 'Times New Roman';
+}

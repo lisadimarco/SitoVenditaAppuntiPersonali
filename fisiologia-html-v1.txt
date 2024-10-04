@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="fisiologia.css" rel="stylesheet" />
+    <script src="script.js"></script>
+    <title>Title</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2>Moduli di Fisiologia</h2>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Fisiologia 1</h3>
+              <p class="card-text">Breve descrizione del modulo.</p>
+              <p class="card-text">Prezzo totale: 20€</p>
+              <button class="btn btn-success" data-toggle="modal" data-target="#previewModal1">Anteprima</button>
+
+              <div class="container mt-5">
+                <h4>Modulo 1: Fisiologia Cellulare</h4>
+
+                <p>Indice del modulo:</p>
+                <ul>
+                  <li>Canali ionici</li>
+                  <li>Potenziale di Membrana a Riposo</li>
+                  <li>Potenziali Graduati</li>
+                  <li>Potenziale D'Azione</li>
+                  <li>Fisiologia della Cellula Muscolare</li>
+                  <li>Sinapsi Elettrica e Chimica</li>
+                </ul>
+
+                <p>Prezzo: 6€ (2€ aggiuntivi per il download)</p>
+                <button class="btn btn-primary" onclick="startPayment()">Acquista</button>
+
+                <div id="pdfViewer" style="display: none">
+                  <iframe
+                    src="path/to/full-pdf.pdf"
+                    width="100%"
+                    height="500px"
+                    title="Anteprima Fisiologia Cellulare"></iframe>
+                </div>
+              </div>
+
+              <script>
+                function startPayment() {
+                  // Aggiungi qui l'integrazione con Stripe o PayPal
+                  // Dopo il pagamento, mostra l'iframe del PDF
+                  document.getElementById("pdfViewer").style.display = "block";
+                }
+              </script>
+
+              <a href="acquisto.html" class="btn btn-primary">Acquista</a>
+            </div>
+          </div>
+        </div>
+        <!-- Aggiungere altri moduli -->
+      </div>
+    </div>
+
+    <!-- Modal per l'anteprima -->
+    <div class="modal fade" id="previewModal1" tabindex="-1" aria-labelledby="previewModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Anteprima Modulo 1: Fisiologia 1</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Visualizza l'anteprima qui. Saranno mostrate le prime 2 pagine del PDF.</p>
+            <!-- Immagine o anteprima del PDF -->
+            <iframe
+              src="/home/lisa/Documenti/Fisiologia 1"
+              width="100%"
+              height="500px"
+              title="Anteprima Fisiologia 1"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
